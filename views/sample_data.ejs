@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <body>
+        <nav>
+            <ul >
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">DASHBOARD</a></li>
+    
+                <!-- <div class="sbtn">
+                    <input type="text" name="search" placeholder="Search this website" id="search">
+                </div> -->
+            </ul>
+    
+            <h1 style="color:white; padding: 55px 30px;">PROFILE PAGE</h1>
+        </nav>
+
+    <div class="data">
+
+        <h1 class="heading">USER DETAILS</h1>
+        
+    <% if( action == 'add') { %>
+
+      <% } else { %>
+
+        <div class="container">
+
+            <%
+                if(sampleData.length > 0)
+                {
+                    sampleData.forEach(function(data){
+            %>
+
+            <div class="item">MEMBER NAME:</div>
+    
+            <div class="entry"><%=data.member_name %></div>
+    
+            <div class="item">EMAIL ID:</div>
+    
+            <div class="entry"><%=data.member_id %></div>
+    
+            <div class="item">AGE:</div>
+    
+            <div class="entry"><%=data.age %></div>
+    
+            <div class="item">GENDER:</div>
+    
+            <div class="entry"><%=data.gender %></div>
+    
+            <div class="item">ADDRESS:</div>
+    
+            <div class="entry"><%=data.address %></div>
+    
+            <div class="item">MEMBER CATEGORY ID:</div>
+    
+            <div class="entry"><%=data.mcategory_id %></div>
+    
+            <div class="item">PASSWORD:</div>
+    
+            <div class="entry"><%=data.password %></div>
+
+            <%
+                });
+            }
+            else
+            {
+            %>
+            <tr>
+                <td class="info" valign="top" align="left" colspan="5">No Data Found</td>
+            </tr>
+            <%
+            }
+            %>
+        </div>
+      <% } %>
+    </div>
+</body>
+</html>

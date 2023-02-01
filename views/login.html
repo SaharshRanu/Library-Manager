@@ -1,0 +1,71 @@
+
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../login.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="https://th.bing.com/th/id/R.d0dace9b5cf4c55410cb6d0001cd551d?rik=wzMarP0lBwupFg&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f4c9%2fo4R%2f4c9o4Rooi.jpeg&ehk=%2b7aE5rccEkEEqIdj7vT%2brvomHKYRCzd7%2bdE4U1KpcZo%3d&risl=&pid=ImgRaw&r=0">
+                <img src="https://th.bing.com/th/id/R.3f7189662f19f8318fc75252deee723a?rik=Qa956Np1tp8Zcg&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f06%2fTwitter-Logo.png&ehk=6ekNd2ZmhpvFDGRZF19QcumP9fb8pZRkwrbFbK%2bpULA%3d&risl=&pid=ImgRaw&r=0">
+                <img src="https://th.bing.com/th/id/R.88d88f1872909358b97ffa695cb97b66?rik=A77az%2fwRYB%2bLrw&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f05%2fGmail_logo_icon.png&ehk=8gYQfqc8h6fYCXddKEQE%2blQ7004YVwPu1S2LSHmiUgE%3d&risl=&pid=ImgRaw&r=0">
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Enter Username" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Forgot Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Enter Username" required>
+                <input type="email" class="input-field" placeholder="Enter Email Id" required>
+                <input type="number" class="input-field" placeholder="Enter Age" required>
+                <input type="text" class="input-field" placeholder="Enter Your Gender" required>
+                <input type="text" class="input-field" placeholder="Enter Your Address" required>
+                <div class="mcat">
+                    Please select a category:
+                    <h5> For Gold pick 1</h5>
+                    <h5> For Silver pick 2</h5>
+                    <h5> For Bronze pick 3</h5>
+                </div>
+                <select name="m_category" id ="mcategory">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type="password" class="input-field" placeholder="Choose A Password" required>
+                <!-- <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span> -->
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            console.log(x)
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        
+    </script>
+</body>
+</html>
